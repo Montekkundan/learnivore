@@ -29,7 +29,7 @@ import {
   // export type Icon = LucideIcon
   
   export const Icons = {
-    logo: Command,
+    logo: (props) => <img src="/icon.png" alt="Logo" width="40" height="40" {...props} />,
     close: X,
     spinner: Loader2,
     chevronLeft: ChevronLeft,
@@ -50,6 +50,7 @@ import {
     sun: SunMedium,
     moon: Moon,
     laptop: Laptop,
+    
     gitHub: ({ ...props }: LucideProps) => (
       <svg
         aria-hidden="true"
