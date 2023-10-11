@@ -7,6 +7,9 @@ import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 import { TextRotation } from "@/components/text-rotation";
 import { useRouter } from "next/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { MainNav } from "@/components/main-nav";
+import { defaultConfig } from "@/config/default";
 const poppins = Poppins({
   weight: "700",
   subsets: ["latin"],
@@ -26,7 +29,7 @@ export default function Home() {
       setCurrentEmoji(emojis[currentIndex]);
       currentIndex = (currentIndex + 1) % emojis.length;
     };
-    const intervalId = setInterval(rotateEmojis, 2000);
+    const intervalId = setInterval(rotateEmojis, 1500);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -43,6 +46,11 @@ export default function Home() {
   
   return (
     <main>
+       <header className="container relative z-40">
+       <div className="flex h-20 items-center justify-between py-6">
+          <MainNav items={defaultConfig.mainNav} />
+        </div>
+        </header>
       {/* Background color */}
       <div
         className={cn(
@@ -80,7 +88,7 @@ export default function Home() {
       />
       {/* Content */}
       <div className="max-w-7xl  mx-auto">
-      <div className="flex flex-col items-center justify-center min-h-screen relative z-10">          {/* Heading */}
+      <div className="flex flex-col items-center justify-center min-h-[80vh] relative z-10">          {/* Heading */}
       <h1   className={`text-7xl flex gap-2 max-w-3xl text-center leading-snug  ${poppins.className}`}># <TextRotation currentEmoji={currentEmoji} /></h1>
       {/* <EmojiRotation currentEmoji={currentEmoji} /> */}
 
@@ -109,6 +117,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <SiteFooter className="relative" showModeToggle={false}/>
     </main>
   );
 }

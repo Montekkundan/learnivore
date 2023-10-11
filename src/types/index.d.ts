@@ -42,7 +42,7 @@ export type DocsConfig = {
   sidebarNav: SidebarNavItem[]
 }
 
-export type GuidesConfig = {
+export type DefaultConfig = {
   mainNav: MainNavItem[]
 }
 
