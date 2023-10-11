@@ -1,6 +1,6 @@
-import { GuidesConfig } from "@/types"
+import { DefaultConfig } from "@/types"
 
-export const guidesConfig: GuidesConfig = {
+export const defaultConfig: DefaultConfig = {
   mainNav: [
     {
         title: "Learn",

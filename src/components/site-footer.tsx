@@ -5,7 +5,12 @@ import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { ModeToggle } from "./mode-toggle"
 
-export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
+interface SiteFooterProps extends React.HTMLAttributes<HTMLElement> {
+  showModeToggle?: boolean;
+}
+
+
+export function SiteFooter({ className, showModeToggle = true }: SiteFooterProps) {
   return (
     <footer className={cn(className)}>
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
@@ -51,7 +56,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             .
           </p>
         </div>
-        <ModeToggle />
+        {showModeToggle && <ModeToggle />}
       </div>
     </footer>
   )
