@@ -89,12 +89,12 @@ export default function Home() {
       {/* Content */}
       <div className="max-w-7xl  mx-auto">
       <div className="flex flex-col items-center justify-center min-h-[80vh] relative z-10">          {/* Heading */}
-      <h1   className={`text-7xl flex gap-2 max-w-3xl text-center leading-snug  ${poppins.className}`}># <TextRotation currentEmoji={currentEmoji} /></h1>
+      <h1   className={`text-7xl flex gap-2 max-w-3xl text-center leading-snug text-gray-300  ${poppins.className}`}># <TextRotation currentEmoji={currentEmoji} /></h1>
       {/* <EmojiRotation currentEmoji={currentEmoji} /> */}
 
           {/* Sub heading */}
           <p className="mb-8">
-            <span className="text-gray-300">
+            <span className="text-gray-300 ">
               Learn....
             </span>
           </p>

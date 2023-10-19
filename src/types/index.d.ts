@@ -34,6 +34,9 @@ export type SiteConfig = {
   links: {
     twitter: string
     github: string
+    instagram: string
+    linkedin: string
+    discord: string
   }
 }
 
