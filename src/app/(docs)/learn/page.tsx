@@ -4,16 +4,16 @@ import { Card } from "@/components/card";
 
 const AllTopics = [
     {
-      slug: 'quickbytes',
-      date: null,
-      title: 'Quick Bytes',
-      description: 'New exciting project, stay tuned!',
+      slug: 'codebytes',
+      customText: 'Daily Coding Insights',
+      title: 'Code Bytes',
+      description: 'Dive into bite-sized coding tutorials and tips every day. Stay tuned for a journey of continuous learning, one byte at a time!',
     },
     {
       slug: 'beforeyoucode',
-      date: null,
+      customText: 'Pre-coding Handbook',
       title: 'Before You Code',
-      description: 'New exciting project, stay tuned!',
+      description:'Embark on a thorough exploration of new programming languages, frameworks, and libraries before diving in. Stay tuned for in-depth reviews and insightful discussions, ensuring a well-informed start to your coding projects!',
     },
     
   ];
@@ -31,7 +31,7 @@ export default async function ProjectsPage() {
 						Topics
 					</h2>
 					<p className="mt-4 text-zinc-400">
-						Some of the projects are from work and some are on my own time.
+						List of all learning topics.
 					</p>
 				</div>
 				<div className="w-full h-px bg-zinc-800" />
@@ -44,15 +44,9 @@ export default async function ProjectsPage() {
 							<article className="relative w-full h-full p-4 md:p-8">
 								<div className="flex items-center justify-between gap-2">
 									<div className="text-xs text-zinc-100">
-										{topic.date ? (
-											<time dateTime={new Date(topic.date).toISOString()}>
-												{Intl.DateTimeFormat(undefined, {
-													dateStyle: "medium",
-												}).format(new Date(topic.date))}
-											</time>
-										) : (
-											<span>SOON</span>
-										)}
+										
+											<span>{topic.customText}</span>
+										
 									</div>
 								
 								</div>

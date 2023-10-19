@@ -29,7 +29,7 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "Introduction",
-          href: "/learn/quickbytes",
+          href: "/learn/codebytes",
         },
       ],
     },
@@ -38,7 +38,7 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "What is Python",
-          href: "/learn/quickbytes/python",
+          href: "/learn/codebytes/python",
         },
       ],
     },

@@ -47,7 +47,7 @@ export function getPagerForDoc(doc: Doc | BYC) {
   const flattenedLinks = [null, ...flatten(isDocType ? docsConfig.sidebarNav : bycConfig.sidebarNav), null];
   const slugParts = doc.slug.split('/');
   const postLearnSlug = slugParts.length > 2 ? slugParts.slice(2).join('/') : '';
-  const prefix = isDocType ? (postLearnSlug ? "/quickbytes/" : "/quickbytes") : (postLearnSlug ? "/beforeyoucode/" : "/beforeyoucode");
+  const prefix = isDocType ? (postLearnSlug ? "/codebytes/" : "/codebytes") : (postLearnSlug ? "/beforeyoucode/" : "/beforeyoucode");
   const activeDocHref = "/learn" + prefix + postLearnSlug;
   let prev = null;
   let next = null;
