@@ -1,9 +1,12 @@
+"use client"
 import * as React from "react"
 import Image from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
+import {CodeBlockComponent} from "@/components/codeblock"
+import {YouTubeComponent} from "@/components/youtubecomponent"
 import { MdxCard } from "@/components/mdx-card"
 
 const components = {
@@ -141,7 +144,7 @@ const components = {
   code: ({ className, ...props }) => (
     <code
       className={cn(
-        "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative bg-black rounded border px-2 py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}
@@ -149,6 +152,8 @@ const components = {
   ),
   Image,
   Callout,
+  CodeBlockComponent,
+  YouTubeComponent,
   Card: MdxCard,
 }
 

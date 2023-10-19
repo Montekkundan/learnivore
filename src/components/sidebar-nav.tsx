@@ -48,7 +48,7 @@ export function DocsSidebarNavItems({
             className={cn(
               "flex w-full items-center rounded-md p-2 hover:underline",
               {
-                "bg-muted": pathname === item.href,
+                "bg-muted text-black": pathname === item.href,
               }
             )}
             target={item.external ? "_blank" : ""}

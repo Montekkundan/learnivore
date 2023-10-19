@@ -24,7 +24,7 @@ export function SiteFooter({ className, showModeToggle = true }: SiteFooterProps
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              montek
+              Montek
             </a>
             . Hosted on{" "}
             <a
@@ -35,16 +35,7 @@ export function SiteFooter({ className, showModeToggle = true }: SiteFooterProps
             >
               Vercel
             </a>
-            . Illustrations by{" "}
-            <a
-              href="https://popsy.co"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Popsy
-            </a>
-            . The source code is available on{" "}
+            .The source code is available on{" "}
             <a
               href={siteConfig.links.github}
               target="_blank"

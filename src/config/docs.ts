@@ -29,58 +29,16 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "Introduction",
-          href: "/learn",
+          href: "/learn/quickbytes",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Python",
       items: [
         {
-          title: "Introduction",
-          href: "/learn/documentation",
-        },
-        {
-          title: "Contentlayer",
-          href: "/learn/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Components",
-          href: "/learn/documentation/components",
-        },
-        {
-          title: "Code Blocks",
-          href: "/learn/documentation/code-blocks",
-        },
-        {
-          title: "Style Guide",
-          href: "/learn/documentation/style-guide",
-        },
-        {
-          title: "Search",
-          href: "/learn/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Blog",
-      items: [
-        {
-          title: "Introduction",
-          href: "/learn/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Build your own",
-          href: "/learn/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Writing Posts",
-          href: "/learn/in-progress",
-          disabled: true,
+          title: "What is Python",
+          href: "/learn/quickbytes/python",
         },
       ],
     },

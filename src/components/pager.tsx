@@ -1,13 +1,14 @@
 import Link from "next/link"
-import { Doc } from "contentlayer/generated"
+import { Doc, BYC } from "contentlayer/generated"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
+import { bycConfig } from "@/config/beforeyoucode"
 
 interface DocsPagerProps {
-  doc: Doc
+  doc: Doc | BYC;
 }
 
 export function DocsPager({ doc }: DocsPagerProps) {
@@ -40,22 +41,33 @@ export function DocsPager({ doc }: DocsPagerProps) {
     </div>
   )
 }
+export function getPagerForDoc(doc: Doc | BYC) {
 
-export function getPagerForDoc(doc: Doc) {
-  const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null]
-  const activeIndex = flattenedLinks.findIndex(
-    (link) => doc.slug === link?.href
-  )
-  const prev = activeIndex !== 0 ? flattenedLinks[activeIndex - 1] : null
-  const next =
-    activeIndex !== flattenedLinks.length - 1
-      ? flattenedLinks[activeIndex + 1]
-      : null
+  const isDocType = doc.type === 'Doc';
+  const flattenedLinks = [null, ...flatten(isDocType ? docsConfig.sidebarNav : bycConfig.sidebarNav), null];
+  const slugParts = doc.slug.split('/');
+  const postLearnSlug = slugParts.length > 2 ? slugParts.slice(2).join('/') : '';
+  const prefix = isDocType ? (postLearnSlug ? "/quickbytes/" : "/quickbytes") : (postLearnSlug ? "/beforeyoucode/" : "/beforeyoucode");
+  const activeDocHref = "/learn" + prefix + postLearnSlug;
+  let prev = null;
+  let next = null;
+
+  for (let i = 0; i < flattenedLinks.length; i++) {
+    const link = flattenedLinks[i];
+    if (link?.href === activeDocHref) {
+      prev = flattenedLinks[i - 1] || null;
+      next = flattenedLinks[i + 1] || null;
+      break;
+    }
+  }
+
   return {
     prev,
     next,
-  }
+  };
 }
+
+
 
 export function flatten(links: { items? }[]) {
   return links.reduce((flat, link) => {

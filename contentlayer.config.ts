@@ -15,9 +15,31 @@ const computedFields: ComputedFields<"Doc"> = {
   },
 }
 
+
+
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
   filePathPattern: `learn/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+  },
+  computedFields,
+}))
+
+export const BYC = defineDocumentType(() => ({
+  name: "BYC",
+  filePathPattern: `learn_BYC/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -142,7 +164,7 @@ export const Page = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Page, Doc, Guide, Post, Author],
+  documentTypes: [Page, Doc, Guide, Post, Author, BYC],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
