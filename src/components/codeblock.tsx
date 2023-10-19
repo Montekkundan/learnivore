@@ -8,7 +8,7 @@ export function CodeBlockComponent({ code, language }) {
     };
   
     return (
-      <div className="relative">
+      <div className="relative pt-5">
         {language && (
           <div className="bg-gray-800 text-white p-2 rounded-t">
             {language}
@@ -26,7 +26,7 @@ export function CodeBlockComponent({ code, language }) {
         </pre>
         <button
           onClick={handleCopy}
-          className="absolute top-0 right-0 bg-blue-500 text-white p-2 rounded-bl"
+          className="absolute top-5 right-0 bg-blue-500 text-white p-2 rounded-bl"
         >
           {copied ? 'Copied!' : 'Copy'}
         </button>
