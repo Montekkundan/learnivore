@@ -8,6 +8,7 @@ import { Callout } from "@/components/callout"
 import {CodeBlockComponent} from "@/components/codeblock"
 import {YouTubeComponent} from "@/components/youtubecomponent"
 import { MdxCard } from "@/components/mdx-card"
+import { GifComponent } from "./gifcomponent"
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -154,6 +155,7 @@ const components = {
   Callout,
   CodeBlockComponent,
   YouTubeComponent,
+  GifComponent,
   Card: MdxCard,
 }
 
