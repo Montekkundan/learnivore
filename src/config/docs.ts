@@ -40,6 +40,10 @@ export const docsConfig: DocsConfig = {
           title: "What is Python",
           href: "/learn/codebytes/python",
         },
+        {
+          title: "Roadmap",
+          href: "/learn/codebytes/python/roadmap",
+        },
       ],
     },
     
