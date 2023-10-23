@@ -45,7 +45,7 @@ export default async function ProjectsPage() {
 								<div className="flex items-center justify-between gap-2">
 									<div className="text-xs text-zinc-100">
 										
-											<span>{topic.customText}</span>
+											<span className="text-foreground">{topic.customText}</span>
 										
 									</div>
 								
