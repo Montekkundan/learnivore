@@ -12,5 +12,6 @@ export const siteConfig: SiteConfig = {
     instagram: "https://www.instagram.com/learnivoreme/",
     linkedin: "https://www.linkedin.com/company/learnivoreme/",
     discord: "https://discord.com/invite/8tFHup743H",
+    youtube: "https://www.youtube.com/@Learnivoreme",
   },
 }

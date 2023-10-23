@@ -37,6 +37,7 @@ export type SiteConfig = {
     instagram: string
     linkedin: string
     discord: string
+    youtube: string
   }
 }
 

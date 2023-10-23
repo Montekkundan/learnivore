@@ -48,6 +48,7 @@ export function SiteFooter({ className, showModeToggle = true }: SiteFooterProps
           </p>
         </div>
         <div className="flex items-center gap-4">
+        <a href={siteConfig.links.youtube} target="_blank" rel="noreferrer">Youtube</a>
           <a href={siteConfig.links.twitter} target="_blank" rel="noreferrer">Twitter</a>
           <a href={siteConfig.links.instagram} target="_blank" rel="noreferrer">Instagram</a>
           <a href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
