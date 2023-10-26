@@ -44,6 +44,10 @@ export const docsConfig: DocsConfig = {
           title: "Roadmap",
           href: "/learn/codebytes/python/roadmap",
         },
+        {
+          title: "Printining to console",
+          href: "/learn/codebytes/python/printing-to-console",
+        },
       ],
     },
     
