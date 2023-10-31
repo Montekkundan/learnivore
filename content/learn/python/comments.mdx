@@ -1,0 +1,82 @@
+---
+title: Python Comments
+description: Learn what are comments in Python and how to use them.
+---
+
+# Hi! Hope you're doing great! 
+Today, we're going to discuss a vital but often overlooked aspect of programming in Python – Comments. Comments are crucial for understanding the code, and today, we'll explore how to use them effectively from beginner to advanced levels. We will be using an online compiler for this, just like the previous lesson! So, open up your online compiler, and let’s get started!
+
+Comments in Python are lines of text in your code that are ignored by Python. They are used to explain your code to other people or remind yourself of what your code does when you come back to it later.
+
+## Let's learn more on why do we use comments?
+
+- **Code Explanation:** Comments are used to describe what a particular piece of code or function does, making it easier for others (and future-you) to understand the code.
+- **Debugging:** Comments are useful for temporarily disabling certain parts of your code while debugging, without having to delete any code.
+- **Code Review:** They are also helpful in code review processes, where you can leave notes for reviewers or explain complex code snippets.
+
+## Let us start with the basics:
+
+## Single-line Comments:
+Single-line comments are created using the hash symbol # at the beginning of the line.
+
+
+
+<CodeBlockComponent code='# This is a single-line comment
+print("Hello, World!")' language="python"/>
+
+In this example, the first line is a comment, and it does not affect the code in any way.
+
+## Multi-line Comments:
+
+For multi-line comments, use a hash symbol # at the beginning of each line, or enclose the comment in triple quotes.
+
+```python
+# This is a
+# multi-line comment
+print("Hello, World!")
+
+"""
+This is also a
+multi-line comment
+"""
+print("Hello, World!")
+```
+
+As you can see alternatively, you can use triple quotes to start and end multi-line comments, though this is technically a string, Python will ignore it if not assigned to a variable. We will come back and look at this later and learn what variables and strings are!
+
+### Inline Comments:
+
+You can also place comments at the end of a line of code to explain what that line does.
+
+<CodeBlockComponent code='print("Hello, World!")  # This line prints "Hello, World!" ' language="python"/>
+
+
+Now, let’s talk about Advanced Commenting Techniques:
+
+## Documentation Strings (Docstrings):
+Docstrings explain the purpose of functions and how to use them. You won’t be able to see this in an online compiler, but you can view docstrings in a code editor or an IDE.
+We will look at functions in later lessons!
+
+
+<CodeBlockComponent code='def greet():
+    """
+    This function displays a greeting.
+    """
+    print("Hello, World!")' language="python"/>
+
+
+## Commenting Out Code:
+Quickly disable parts of your code by commenting them out, using the shortcut **ctrl + /**
+
+---
+
+Teaching comments is pivotal as it fosters good coding practices, ensuring that your code is descriptive and easy to understand, which is especially important when working on projects with others.
+
+That concludes our journey into Python comments. Experiment with using comments in your code, and see the clarity they bring.
+ If you have any doubts or questions, feel free to join our [**Discord channel**](https://discord.com/invite/8tFHup743H). I'll be there to help you out! 
+ You can view this on YouTube as well!
+
+<YouTubeComponent url="https://www.youtube.com/watch?v=RU5kcvBWW_Y" />
+
+## Have a Great Day!
+And as always, learn, grow, and share. **Peace! ✌️**

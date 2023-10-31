@@ -48,6 +48,10 @@ export const docsConfig: DocsConfig = {
           title: "Printining to console",
           href: "/learn/codebytes/python/printing-to-console",
         },
+        {
+          title: "Comments",
+          href: "/learn/codebytes/python/comments",
+        },
       ],
     },
     
