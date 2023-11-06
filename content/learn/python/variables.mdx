@@ -1,0 +1,127 @@
+---
+title: Python Variables
+description: Learn about Python Variables,and how to use them in your code.
+---
+
+# Python Programming: Variables Explained!
+
+Hi! Hope you're doing great! Today, we are diving into a fundamental building block of Python programming: **Variables**. Variables are essential for storing data that your program will use. Just like in the previous lesson, let's dive into our online compiler and explore how variables work in Python.
+
+## What is a Variable?
+
+In Python, a variable is essentially a name that refers to a value stored in memory. It acts as a reference to data so that you can use, manipulate, and manage data within your program.
+
+## Variable Declaration and Assignment
+
+In Python, you can create a variable and assign it a value using the equals sign =. Here is an example:
+
+
+<CodeBlockComponent code='name = "Alice"
+age = 5' language="python"/>
+
+In this code, name is a variable that holds the string "Alice", and age is a variable that holds the number 5.
+
+You can print the variables too! Use the print() function you learned in previous lessons, and remember you don't need to use quotation marks in print() function when using variables.
+
+Press "Run" and we get the variable value printed.
+
+## Variable Types
+
+Variables can hold different types of data, like text (strings), numbers (integers, floats), and more.
+
+```python
+string_var = "Hello, World!"
+int_var = 10
+bool_var = True
+float_var = 20.5
+
+```
+
+Each variable holds data of a different type: a string, an integer, a boolean, and a float, respectively.
+
+We will study variable types more later!
+
+## Variable Reference
+
+Once a value is assigned to a variable, you can refer to that value by using the variable's name. This reference allows you to retrieve and manipulate the stored data.
+
+```python
+my_variable = 10
+my_variable = my_variable + 5  
+# The value of 'my_variable' is now 15.
+```
+Let us try it, set **my_variable** to any number, add any number to it and print it:
+
+<CodeBlockComponent code='my_variable = 10
+my_variable = my_variable + 5
+print(my_variable) # should print 15' language="python"/>
+
+## Reassigning Variables
+
+You can change the value of a variable by simply assigning it a new value.
+
+```python
+message = "Hello"
+message = "Goodbye"
+```
+The variable **message** holds the string "Goodbye" instead of "Hello". Try printing it!
+
+## Variable Naming Rules
+
+Variable names must start with a letter or an underscore, and can contain letters, numbers, and underscores.
+
+```python
+valid_var = "This is valid"
+_invalid_var = "This is also valid"
+```
+
+- ### Avoid Using Reserved Words
+
+Python has a set of reserved words that should not be used as variable names as they have special meanings. For example: if, else, while, for, etc.
+- ### Avoid Confusing Names
+Avoid names that are easily confusing like l (lowercase letter el), O (uppercase letter oh), or I (uppercase letter eye) as they can be confused with 1 (one) and 0 (zero).
+- ### Avoid Using Special Symbols
+Variable names cannot contain special symbols like @, $, %, etc., except for the underscore.
+- ### Descriptive Naming
+It's a good practice to use descriptive names for variables to make your code more readable.
+```python
+user_name = "Alice"  # Descriptive
+u = "Alice"          # Not descriptive
+```
+
+Understanding these rules and the different types of data that variables can hold is fundamental to writing effective and error-free Python code.
+## Dynamic Typing
+
+Python is dynamically typed, which means you can change a variable’s type by assigning it a new value of a different type.
+
+<CodeBlockComponent code='var = 10
+var = "Now I am a string"
+print(var)' language="python"/>
+
+Try printing the **var** variable using the print() function and see if its changed!
+
+## Task for Today! Using Variables
+
+Once a variable has a value, you can use it in your code. So, your task for today is to create a program using variables, add your name and a greeting in a variable and print it out!
+
+```python
+greeting = "Hello, " 
+# do add a space here to print out the space
+name = "Bob"
+full_greeting = greeting + name
+print(full_greeting)  # Output: Hello, Bob
+
+```
+
+In this example, we’ve created a new variable **full_greeting** by concatenating greeting and name.
+
+That concludes our exploration of variables in Python. Feel free to experiment with creating and using variables in your online compiler.
+
+
+That's all for today! If you have any doubts or questions, feel free to join our [**Discord channel**](https://discord.com/invite/8tFHup743H). You can view this on YouTube as well!
+
+<YouTubeComponent url="https://www.youtube.com/watch?v=mKEbMz1obHU" />
+
+## Have a Great Day!
+
+And as always, learn, grow, and share. **Peace! ✌️**
