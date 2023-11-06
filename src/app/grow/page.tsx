@@ -1,3 +1,5 @@
+
+
 function page() {
     return (
       <div className="relative pb-16">
@@ -8,8 +10,6 @@ function page() {
               </h2>
              
           </div>
-  
-      
       </div>
   </div>
     )

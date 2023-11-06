@@ -3,11 +3,11 @@ import localFont from "next/font/local"
 
 import "./globals.css"
 import { siteConfig } from "@/config/site"
-import { absoluteUrl, cn } from "@/lib/utils"
+import {  cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/theme-provider"
-
+import { ClerkProvider } from '@clerk/nextjs'
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -72,6 +72,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
+    <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
@@ -88,5 +89,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   )
 }

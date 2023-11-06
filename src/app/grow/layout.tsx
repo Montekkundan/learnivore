@@ -7,6 +7,7 @@ import { MainNav } from "@/components/main-nav"
 import { DocsSearch } from "@/components/search"
 import { DocsSidebarNav } from "@/components/sidebar-nav"
 import { SiteFooter } from "@/components/site-footer"
+import { UserButton } from "@clerk/nextjs"
 
 interface DocsLayoutProps {
   children: React.ReactNode
@@ -33,6 +34,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                 <Icons.gitHub className="h-7 w-7" />
                 <span className="sr-only">GitHub</span>
               </Link>
+              <UserButton afterSignOutUrl="/" />
             </nav>
           </div>
         </div>
