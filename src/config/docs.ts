@@ -56,6 +56,10 @@ export const docsConfig: DocsConfig = {
           title: "Variables",
           href: "/learn/codebytes/python/variables",
         },
+        {
+          title: "Inputs",
+          href: "/learn/codebytes/python/inputs",
+        },
       ],
     },
     

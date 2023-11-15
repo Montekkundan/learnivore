@@ -1,0 +1,56 @@
+---
+title: Python Inputs
+description: Learn about Python Input function!
+---
+
+# User Interaction Using the **input()** Function
+
+Hi! Hope you're doing great! Today we're moving forward in our Python adventure by learning how to interact with users. We will be introducing a new function called **input()** which allows us to get information from our users. We'll then create a simple form to collect some basic information. So, without further ado, let us get started!
+
+## Understanding the **input()** Function
+
+The **input()** function displays a message to the user and waits for them to type something in response. Here is how it works:
+
+<CodeBlockComponent code='input("What is your favorite color?")' language="python"/>
+
+Type this code into your online compiler and hit "Run." You'll see the message "What's your favorite color?" on the console. You can type your answer and hit enter, but nothing else will happen. That is because we have not told Python what to do with the users answer.
+
+## Introducing Variables
+
+A variable is like a storage box where we can keep a piece of information to use later. Let us modify our code to store the users answer in a variable:
+
+<CodeBlockComponent code='user_response = input("What is your favorite color?")' language="python"/>
+
+Now, when you run this code, type your answer, and hit enter, Python will store your answer in a variable called user_response.
+
+
+## Creating a Simple Form
+
+Let us combine what we have learned to create a simple form that asks for the user's name, age, and favorite color:
+
+```python
+# Asking for the user's name
+name = input("What's your name? ")
+
+# Asking for the user's age
+age = input("How old are you? ")
+
+# Asking for the user's favorite color
+favorite_color = input("What's your favorite color? ")
+
+# Displaying the collected information
+print("Nice to meet you, " + name + "!")
+print("So you're " + age + " years old, and your favorite color is " + favorite_color + ". Cool!")
+```
+
+In this code, we have used the input() function to ask three different questions, and we've stored the user's answers in variables. We then used the print() function to display a summary of the information we collected.
+
+Try running this code in your online compiler, and see how it works!
+
+That's all for today! If you have any doubts or questions, feel free to join our [**Discord channel**](https://discord.com/invite/8tFHup743H). You can view this on YouTube as well!
+
+<YouTubeComponent url="https://www.youtube.com/watch?v=jf9KnwVmVWo" />
+
+## Have a Great Day!
+
+And as always, learn, grow, and share. **Peace! ✌️**

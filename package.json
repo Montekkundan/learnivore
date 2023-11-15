@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
+    "content": "contentlayer dev",
     "build": "contentlayer build && next build",
     "turbo": "next dev --turbo",
     "start": "next start",
@@ -36,6 +37,7 @@
     "rehype-slug": "^6.0.0",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.0",
+    "shiki": "^0.14.5",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
