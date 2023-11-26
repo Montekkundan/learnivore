@@ -60,6 +60,10 @@ export const docsConfig: DocsConfig = {
           title: "Inputs",
           href: "/learn/codebytes/python/inputs",
         },
+        {
+          title: "IDE",
+          href: "/learn/codebytes/python/ide",
+        },
       ],
     },
     
