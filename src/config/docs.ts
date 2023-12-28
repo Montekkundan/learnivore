@@ -64,6 +64,10 @@ export const docsConfig: DocsConfig = {
           title: "IDE",
           href: "/learn/codebytes/python/ide",
         },
+        {
+          title: "Operators ",
+          href: "/learn/codebytes/python/operators",
+        },
       ],
     },
     
