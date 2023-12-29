@@ -57,6 +57,26 @@ export const BYC = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Dash = defineDocumentType(() => ({
+  name: "Dash",
+  filePathPattern: `learn_Dash/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+  },
+  computedFields,
+}))
+
 export const Guide = defineDocumentType(() => ({
   name: "Guide",
   filePathPattern: `guides/**/*.mdx`,
@@ -164,7 +184,7 @@ export const Page = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Page, Doc, Guide, Post, Author, BYC],
+  documentTypes: [Page, Doc, Guide, Post, Author, BYC, Dash],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

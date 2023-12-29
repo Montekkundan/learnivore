@@ -5,7 +5,7 @@ import "./env.mjs"
 const nextConfig = {
     images: {
         dangerouslyAllowSVG: true,
-        domains: ["cdn.builder.io"],
+        domains: ["cdn.builder.io", "pbs.twimg.com"],
       },
 }
 

@@ -1,6 +1,6 @@
-import { BYCConfig } from "@/types"
+import { DashConfig } from "@/types"
 
-export const bycConfig: BYCConfig = {
+export const dashConfig: DashConfig = {
   mainNav: [
     {
       title: "Learn",
@@ -29,19 +29,19 @@ export const bycConfig: BYCConfig = {
       items: [
         {
           title: "Introduction",
-          href: "/learn/beforeyoucode",
+          href: "/learn/devdash",
         },
       ],
     },
     {
-      title: "Library",
-      items: [
-        {
-          title: "shadcn/ui",
-          href: "/learn/beforeyoucode/library/shadcnui",
-        },
-      ],
-    },
+        title: "Languages",
+        items: [
+          {
+            title: "HTML",
+            href: "/learn/devdash/languages/html",
+          },
+        ],
+      },
     
   ],
 }

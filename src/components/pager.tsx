@@ -1,14 +1,15 @@
 import Link from "next/link"
-import { Doc, BYC } from "contentlayer/generated"
+import { Doc, BYC, Dash } from "contentlayer/generated"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { bycConfig } from "@/config/beforeyoucode"
+import { dashConfig } from "@/config/devdash"
 
 interface DocsPagerProps {
-  doc: Doc | BYC;
+  doc: Doc | BYC | Dash;
 }
 
 export function DocsPager({ doc }: DocsPagerProps) {
@@ -41,13 +42,17 @@ export function DocsPager({ doc }: DocsPagerProps) {
     </div>
   )
 }
-export function getPagerForDoc(doc: Doc | BYC) {
+export function getPagerForDoc(doc: Doc | BYC | Dash) {
 
   const isDocType = doc.type === 'Doc';
-  const flattenedLinks = [null, ...flatten(isDocType ? docsConfig.sidebarNav : bycConfig.sidebarNav), null];
+  const isBYCType = doc.type === 'BYC'; // Added for clarity
+  // Determine the configuration based on the doc type
+  const config = isDocType ? docsConfig : isBYCType ? bycConfig : dashConfig;
+  const flattenedLinks = [null, ...flatten(config.sidebarNav), null];
   const slugParts = doc.slug.split('/');
   const postLearnSlug = slugParts.length > 2 ? slugParts.slice(2).join('/') : '';
-  const prefix = isDocType ? (postLearnSlug ? "/codebytes/" : "/codebytes") : (postLearnSlug ? "/beforeyoucode/" : "/beforeyoucode");
+  // Determine the prefix based on the doc type
+  const prefix = isDocType ? "/codebytes" : isBYCType ? "/beforeyoucode" : "/devdash";
   const activeDocHref = "/learn" + prefix + postLearnSlug;
   let prev = null;
   let next = null;
@@ -61,11 +66,9 @@ export function getPagerForDoc(doc: Doc | BYC) {
     }
   }
 
-  return {
-    prev,
-    next,
-  };
+  return { prev, next };
 }
+
 
 
 

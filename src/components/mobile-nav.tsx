@@ -14,8 +14,6 @@ interface MobileNavProps {
 
 export function MobileNav({ items, children }: MobileNavProps) {
   useLockBody()
-  console.log("items", items)
-  console.log("children", children)
   return (
     <div
       className={cn(
@@ -41,7 +39,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
             </Link>
           ))}
         </nav>
-        {children}
+        {/* {children} */}
       </div>
     </div>
   )

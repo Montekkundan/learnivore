@@ -50,6 +50,11 @@ export type BYCConfig = {
   mainNav: MainNavItem[]
   sidebarNav: SidebarNavItem[]
 }
+export type DashConfig = {
+  mainNav: MainNavItem[]
+  sidebarNav: SidebarNavItem[]
+}
+
 
 export type DefaultConfig = {
   mainNav: MainNavItem[]

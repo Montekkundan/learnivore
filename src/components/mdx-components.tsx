@@ -9,6 +9,7 @@ import {CodeBlockComponent} from "@/components/codeblock"
 import {YouTubeComponent} from "@/components/youtubecomponent"
 import { MdxCard } from "@/components/mdx-card"
 import { GifComponent } from "./gifcomponent"
+import { Slides } from "./slides"
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -156,6 +157,7 @@ const components = {
   CodeBlockComponent,
   YouTubeComponent,
   GifComponent,
+  Slides,
   Card: MdxCard,
 }
 
