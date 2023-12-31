@@ -52,8 +52,8 @@ export function getPagerForDoc(doc: Doc | BYC | Dash) {
   const slugParts = doc.slug.split('/');
   const postLearnSlug = slugParts.length > 2 ? slugParts.slice(2).join('/') : '';
   // Determine the prefix based on the doc type
-  const prefix = isDocType ? "/codebytes" : isBYCType ? "/beforeyoucode" : "/devdash";
-  const activeDocHref = "/learn" + prefix + postLearnSlug;
+  const prefix = isDocType ? "/codebytes" : isBYCType ? "/beforeyoucode/" : "/devdash";
+  const activeDocHref = "/learn" + prefix  + postLearnSlug;
   let prev = null;
   let next = null;
 
@@ -65,7 +65,9 @@ export function getPagerForDoc(doc: Doc | BYC | Dash) {
       break;
     }
   }
-
+  console.log("activeDocHref", activeDocHref);
+  console.log("prev", prev);
+  console.log("next", next);
   return { prev, next };
 }
 

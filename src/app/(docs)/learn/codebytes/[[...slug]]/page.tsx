@@ -12,6 +12,7 @@ import { Metadata } from "next"
 
 import { env } from "../../../../../../env.mjs"
 import { absoluteUrl } from "@/lib/utils"
+import Speech from "@/components/speach"
 
 interface DocPageProps {
   params: {
@@ -100,6 +101,8 @@ export default async function DocPage({ params }: DocPageProps) {
       <div className="hidden text-sm xl:block">
         <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
           <DashboardTableOfContents toc={toc} />
+        {/* <Speech content={doc.body.raw} /> */}
+
         </div>
       </div>
     </main>
